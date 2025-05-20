@@ -1,0 +1,7 @@
+jaffle_shop: # Name of the profile
+  target: dev # See line 4
+  outputs:
+    dev: # This is the dev "target"
+      type: duckdb # Type of warehouse
+      path: "jaffle_shop.duckdb"
+      threads: 24 # The number of threads the dbt project will run on
