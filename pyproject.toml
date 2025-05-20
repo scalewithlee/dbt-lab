@@ -1,0 +1,7 @@
+[project]
+name = "dbt-lab"
+version = "0.1.0"
+description = "A lab for exploring dbt with DuckDB"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
