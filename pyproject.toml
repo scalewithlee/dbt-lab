@@ -4,4 +4,9 @@ version = "0.1.0"
 description = "A lab for exploring dbt with DuckDB"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "dbt-core>=1.9.0,<1.10.0",
+    "dbt-duckdb>=1.9.0,<2.0.0",
+    "duckcli>=0.2.1",
+    "sqlfluff>=2.3.5,<3",
+]
