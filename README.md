@@ -10,3 +10,14 @@ uv venv
 source .venv/bin/activate
 uv add -r requirements.txt
 ```
+
+# Build the project
+```
+dbt build
+```
+
+# Query the data
+```
+duckcli jaffle_shop.duckdb
+jaffle_shop.duckdb> select * from customers;
+```
