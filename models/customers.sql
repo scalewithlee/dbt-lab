@@ -22,7 +22,7 @@ customer_orders as (
 
 customer_payments as (
     select
-        orders.customer_id
+        orders.customer_id,
         sum(amount) as total_amount
     from payments
 
@@ -39,7 +39,7 @@ final as (
         customers.last_name,
         customer_orders.first_order,
         customer_orders.most_recent_order,
-        customer_orders.number_or_orders,
+        customer_orders.number_of_orders,
         customer_payments.total_amount as customer_lifetime_value
 
     from customers
@@ -48,7 +48,7 @@ final as (
         customers.customer_id = customer_orders.customer_id
 
     left join customer_payments on
-        customer.customer_id = customer_payments.customer_id
+        customers.customer_id = customer_payments.customer_id
 )
 
 select * from final
